@@ -1,0 +1,20 @@
+<!-- index.html -->
+<html>
+<head>
+    <title>Access Code Verification</title>
+</head>
+<body>
+    <h1>Access Code Verification</h1>
+    <form hx-post="/verify">
+        <input type="text" name="code" placeholder="Enter Access Code">
+        <button type="submit">Verify</button>
+    </form>
+    <hr>
+    <h2>Generate Access Code</h2>
+    <button hx-post="/generate" hx-target="#generatedCode">Generate Code</button>
+    <div id="generatedCode"></div>
+    <hr>
+    <h2>Activity Logs</h2>
+    <div hx-get="/logs"></div>
+</body>
+</html>
